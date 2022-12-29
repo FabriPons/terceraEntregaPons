@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tercera entrega</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+</head>
+
+  <body>
+
+    <!--NAVEGACIÓN-->
+
+    <nav class="navbar bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1"></span>
+        <button type="button" class="btn btn-primary" id="shop"> <span class="badge text-bg-secondary"></span>
+        </button>
+      </div>
+    </nav>
+
+     <!-- CONTACTO -->
+    
+     <div class="container">
+      <div class="container">
+        <h2>Se miembro de la comunidad Munay</h2>
+      </div>
+      <form id="formulario" action="/redireccion">
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label"
+          >Nombre y Apellido</label
+          >
+          <input type="text" class="form-control" id="nombre" />
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label"
+          >Correo Electrónico</label
+          >
+          <input type="text" class="form-control" id="correo" />
+        </div>
+        <button type="submit" class="btn btn-outline-success">
+          Enviar información
+        </button>
+      </div>
+    </form>
+    
+    <!-- NOTIFICACIÓN FORMULARIO -->
+    
+    <div class="container">
+      <div class="info"></div>
+    </div>
+      
+    <!--PRODUCTOS -->
+
+  <div class="container-products">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Dispenser</h5>
+            <p class="card-text">Descripcion del producto</p>
+            <button class="btn btn-primary" id="boton">Agregar</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Picadora<h5>
+            <p class="card-text">Descripcion del producto</p>
+            <button class="btn btn-primary" id="boton">Agregar</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Angry mama</h5>
+            <p class="card-text">Descripcion del producto</p>
+            <button class="btn btn-primary" id="boton">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="carrito"></div>
+
+
+  <!-- FORMULARIO DE CONTACTO -->
+  
+  <div class="container">
+    <div class="container">
+
+      <!--Scripts-->
+    <script src="./app.js"></script>
+</body>
+</html>

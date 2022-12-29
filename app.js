@@ -95,3 +95,54 @@ const pintarInfo = formulario.addEventListener("submit", function (e) {
   <div class="alert alert-warning" role="alert">
 <h5> Bienvenido ${nombreForm.value} a la familia Munay. Vas a recibir nuestros productos y ofertas en ${correoForm.value}.</h5></div>`;
 });
+
+
+// Carrito de compras.
+
+const cards = document.querySelectorAll(".card");
+cards.forEach((card) => {
+  card.addEventListener("click", (e) => {
+    leerDatosProducto(e.target.parentElement);
+  });
+});
+
+//Guardar los productos - se empieza vacio
+let articulosCarrito = [];
+
+function leerDatosProducto(producto) {
+  const infoProducto = {
+    titulo: producto.querySelector(".card-title").textContent,
+    texto: producto.querySelector(".card-text").textContent,
+  };
+
+  //Sumar productos
+  articulosCarrito = [...articulosCarrito, infoProducto];
+  console.log(articulosCarrito);
+
+  //Mostrar lo pedido
+  carritoHTML();
+}
+
+//productos
+const carrito = document.querySelector("#carrito");
+
+function carritoHTML() {
+  //HTML en 0 
+  limpiarHTML();
+
+  articulosCarrito.forEach((producto) => {
+    const row = document.createElement("p");
+    row.innerHTML = `
+    <div class="container">
+    <h5>${producto.titulo}</h5>
+    <p>${producto.texto}</p>
+    <button class="btn btn-danger">Eliminar</button>
+    </div>
+    `; //EL boton eliminar todavia no está funcional; se va a sumar el producto en un otra sección.
+    carrito.appendChild(row);
+  });
+}
+
+function limpiarHTML() {
+  carrito.innerHTML = "";
+}

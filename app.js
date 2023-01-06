@@ -114,11 +114,12 @@ function leerDatosProducto(producto) {
     titulo: producto.querySelector(".card-title").textContent,
     texto: producto.querySelector(".card-text").textContent,
   };
-
+ 
   //Sumar productos
   articulosCarrito = [...articulosCarrito, infoProducto];
   console.log(articulosCarrito);
-
+  
+  localStorage.setItem("articulosCarrito",JSON.stringify(articulosCarrito)) 
   //Mostrar lo pedido
   carritoHTML();
 }
